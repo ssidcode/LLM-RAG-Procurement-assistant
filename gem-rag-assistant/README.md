@@ -95,16 +95,3 @@ Ask things like:
 Each answer includes an expandable **Sources** panel citing the exact PDF
 and page number the model used.
 
-## Notes / things to extend for a portfolio project
-
-- **Swap models**: change `EMBED_MODEL` / `LLM_MODEL` in `rag.py` to any
-  Ollama model you've pulled (e.g. `mistral`, `phi3`, `qwen2.5`).
-- **Evaluation**: add a small set of Q&A pairs and measure retrieval
-  precision/recall or answer faithfulness — good for a resume bullet point.
-- **Hybrid search**: combine Chroma's vector search with BM25 keyword
-  search for better recall on exact policy terms (e.g. "TDS", "SOP number").
-- **Re-ranking**: add a cross-encoder re-ranker on top of the initial
-  retrieval for higher precision on the top-k results.
-- **Deployment**: Streamlit Community Cloud can't run Ollama, so for a live
-  demo you'd need a small VM/cloud box with Ollama installed, or swap the
-  LLM call for a hosted API (OpenAI/Anthropic/Groq) behind an env var toggle.
